@@ -47,7 +47,17 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Explore-GitHub-Actions4:
     needs: Explore-GitHub-Actions2
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-18.04]
+        node: [8, 10, 12, 14]
+        include:
+          # includes a new variable of npm with a value of 6
+          # for the matrix leg matching the os and version
+          - os: windows-latest
+            node: 8
+            npm: 6    
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
