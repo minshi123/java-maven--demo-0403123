@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  Explore-GitHub-Actions0Explore-GitHub-Actions0Explore-GitHub-Actions0Explore-GitHub-Actions0:
+  Explore-GitHub-Actions0:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -84,7 +84,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  Explore-GitHub-Actions8:
+  Explore-GitHub-Actions8Explore-GitHub-Actions8Explore-GitHub-Actions8Explore-GitHub-Actions8Explore-GitHub-Actions8:
       needs: Explore-GitHub-Actions0
       runs-on: ${{ matrix.os }}
       strategy:
