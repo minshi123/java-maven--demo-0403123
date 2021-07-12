@@ -14,10 +14,6 @@
     <name>spring-boot-demo</name>
     <description>Spring Boot Demo for Goodrain</description>
 
-         
-         
-         
-         
     <properties>
         <java.version>1.8</java.version>
     </properties>
